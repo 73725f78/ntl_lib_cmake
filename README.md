@@ -32,9 +32,11 @@ For integrate this library in other CMake projects you can use this in your CMak
   )
 
   FetchContent_MakeAvailable(ntl_lib)
+```
 
 You can use ntl_lib as a target_link_libraries. For example, for a executable mainx.
 
+```
 target_link_libraries(mainx
    ntl_lib
 )
