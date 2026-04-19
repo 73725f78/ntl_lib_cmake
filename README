@@ -20,6 +20,20 @@ The latest version of NTL is available at http://www.shoup.net.
 QUICK START GUIDE FOR UNIX
 ---------------------------------
 
+Compiling with CMake (tested on REHL)
+
+  mkdir build
+  cd build
+  cmake ..
+
+For run testings
+
+  ctest
+
+For specifi test use -R, for example:
+
+  ctest -R QuickTest
+
 In the src directory, you can use the basic pattern of 
    ./configure [ variable=value ]...
    make 
