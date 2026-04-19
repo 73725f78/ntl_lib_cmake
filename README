@@ -20,6 +20,27 @@ The latest version of NTL is available at http://www.shoup.net.
 QUICK START GUIDE FOR UNIX
 ---------------------------------
 
+For integrate this library in other CMake projects you can use this in your CMakeLists.txt file:
+
+  include(FetchContent)
+
+  FetchContent_Declare(
+    ntl_lib
+    GIT_REPOSITORY https://github.com/73725f78/ntl_lib_cmake.git
+    GIT_TAG        v11.6.0
+  )
+
+  FetchContent_MakeAvailable(ntl_lib)
+
+You can use ntl_lib as a target_link_libraries. For example, for a executable mainx.
+
+target_link_libraries(mainx
+   ntl_lib
+)
+
+----------------------------------
+
+
 Compiling with CMake (tested on REHL)
 
   mkdir build
