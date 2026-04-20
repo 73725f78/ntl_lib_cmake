@@ -20,7 +20,7 @@ The latest version of NTL is available at http://www.shoup.net.
 QUICK START GUIDE FOR UNIX
 ---------------------------------
 
-For integrate this library in other CMake projects you can use this in your CMakeLists.txt file:
+For integrate this library in other CMake projects you can use this in your CMakeLists.txt file (tested on REHL):
 
 ```
   include(FetchContent)
