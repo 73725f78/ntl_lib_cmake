@@ -31,7 +31,11 @@ list(FILTER NTL_SOURCES EXCLUDE REGEX "src/GetTime[2-5]\\.cpp")
 add_library(ntl_lib STATIC ${NTL_SOURCES})
 
 # Use the variables found by find_package/path/library
-target_include_directories(ntl_lib PUBLIC ${GMP_INCLUDE_DIR})
+target_include_directories(ntl_lib PUBLIC 
+    ${GMP_INCLUDE_DIR}
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"  # Path to the directory containing the NTL/ folder
+)
+
 target_link_libraries(ntl_lib PUBLIC ${GMP_LIBRARY} Threads::Threads)
 
 # Definitions
